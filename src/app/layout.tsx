@@ -3,6 +3,19 @@ import '@/styles/components/index.scss'
 import '@/styles/layout/index.scss'
 import '@/styles/modules/index.scss'
 import React from 'react'
+import { Inter } from 'next/font/google'
+import { Metadata } from 'next'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+export const metadata: Metadata = {
+  title: 'MyTube',
+  description: 'MyTube project in next js',
+}
 
 export default function RootLayout({
   children,
@@ -10,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body>{children}</body>
     </html>
   )

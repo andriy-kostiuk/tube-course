@@ -23,6 +23,7 @@
     visibility: hidden;
     transform: translateY(-10px);
     transition: all $transition-fast;
+    padding: $spacing-2;
     
     &--open {
       opacity: 1;
@@ -39,6 +40,8 @@
   &__header {
     padding: $spacing-3 $spacing-4;
     border-bottom: 1px solid $border-default;
+    display: flex;
+    gap: $spacing-1;
   }
   
   &__body {
